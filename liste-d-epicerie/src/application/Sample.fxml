@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="211.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste d'épicerie" wrappingWidth="196.21875">
@@ -14,15 +13,15 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <TableView layoutX="35.0" layoutY="63.0" prefHeight="200.0" prefWidth="518.0">
+      <TableView layoutX="36.0" layoutY="63.0" prefHeight="200.0" prefWidth="518.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="deptColumn" prefWidth="130.0" text="Département" />
+          <TableColumn fx:id="nomColumn" prefWidth="130.0" text="Nom" />
+            <TableColumn fx:id="quantiteColumn" prefWidth="130.0" text="Quantité" />
+            <TableColumn fx:id="prixColumn" prefWidth="130.0" text="Prix (pour un)" />
         </columns>
       </TableView>
-      <GridPane layoutX="78.0" layoutY="294.0" prefHeight="90.0" prefWidth="427.0">
+      <GridPane layoutX="58.0" layoutY="291.0" prefHeight="126.0" prefWidth="474.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -34,13 +33,45 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Label" />
-            <Label text="Label" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.rowIndex="2" />
-            <Label text="Label" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Département " />
+            <Label text="Nom" GridPane.rowIndex="1" />
+            <Label text="Quantité" GridPane.rowIndex="2" />
+            <Label text="Prix (pour un)" GridPane.rowIndex="3" />
+            <TextField id="txtQuantite" fx:id="txtQuantite" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="txtNom" fx:id="txtNom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cboDept" prefHeight="27.0" prefWidth="203.0" promptText="Choix département" GridPane.columnIndex="1" />
+            <TextField id="txtPrix" fx:id="txtPrix" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
+      <HBox layoutX="100.0" layoutY="443.0" prefHeight="100.0" prefWidth="474.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnAjouter" mnemonicParsing="false" text="Ajouter " />
+            <Button fx:id="btnModifier" mnemonicParsing="false" text="Modifier" />
+            <Button fx:id="btnEffacer" mnemonicParsing="false" text="Effacer" />
+            <Button fx:id="btnRecommencer" mnemonicParsing="false" text="Recommencer" />
+         </children>
+      </HBox>
+      <MenuBar prefHeight="27.0" prefWidth="168.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Nouveau" />
+                  <MenuItem mnemonicParsing="false" text="Ouvrir" />
+                  <MenuItem mnemonicParsing="false" text="Sauvegarder" />
+                  <MenuItem mnemonicParsing="false" text="Sauvegarder sous" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Votre reçu" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
