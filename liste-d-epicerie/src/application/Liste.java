@@ -9,44 +9,48 @@ public class Liste
 	
 	
 	//constructeur vide
-	public Liste()
-	{
-		this(null);
+		public Liste()
+		{
+			this(null);
+			
+		}
+		//Constructeur avec 1 paramètre
+		public Liste(String nom)
+		{
+			
+			this.nom=nom;
+			this.departement="";
+			this.quantite=0.0;
+			this.prix=0.0;
+		} 
 		
-	}
-	//Constructeur avec 2 paramètres
-	public Liste(String nom)
-	{
+		//Getters et Setters
 		
-		this.nom=nom;
-		this.departement="";
-		this.quantite=0.0;
-		this.prix=0.0;
-	} //Getters et Setters
-	
+
 	public String getDepartement() {
 		return departement;
 	}
 	public void setDepartement(String departement) {
 		this.departement = departement;
 	}
-	public String getnom() {
+	public String getNom() {
 		return nom;
 	}
-	public void setnom(String nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
-	public Double getquantite() {
+	public Double getQuantite() {
 		return quantite;
 	}
-	public void setAge(Double quantite) {
+	public void setQuantite(Double quantite) {
 		this.quantite = quantite;
 	}
-	public Double getprix() {
+	public Double getPrix() {
 		return prix;
 	}
-	public void setprix(Double prix) {
+	public void setPrix(Double prix) {
 		this.prix = prix;
 	}
+	
+	
 }
